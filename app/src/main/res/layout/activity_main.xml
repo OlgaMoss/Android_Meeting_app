@@ -6,13 +6,41 @@
     android:layout_height="match_parent"
     tools:context="com.chanta.myapplication.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border"
+        android:gravity="start"
+        android:hint="@string/text_search"
+        android:imeOptions="actionSend"
+        android:maxLines="1"
+        android:textSize="@dimen/app_name_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/list_translate"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"
+        />
+
+    <ListView
+        android:id="@+id/list_translate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="top"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

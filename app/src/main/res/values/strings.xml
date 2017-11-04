@@ -30,8 +30,28 @@
         <item>Попов</item>
     </string-array>
 
+    <string-array name="list_meetings">
+        <item>Встреча 1</item>
+        <item>Встреча 2</item>
+        <item>Встреча 3</item>
+        <item>Встреча 4</item>
+    </string-array>
+
+
     <string name="title_described">Описание встречи</string>
     <string name="edit_described">Править</string>
+
+    <string name="text_search">Введите слово</string>
+
+    <string name="choice_delete">Удаление</string>
+    <string name="choice_delete_text">Вы действительно хотите удалить запись?</string>
+    <string name="choice_ok">Да</string>
+    <string name="cancel">Отмена</string>
+
+    <string name="menu_update">Обновить</string>
+
+    <string name="my_choose_date">Выберите дату</string>
+    <string name="ready">Готово</string>
 
 
 </resources>
