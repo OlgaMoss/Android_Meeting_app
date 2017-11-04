@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Мои встречи</string>
+
+    <string name="login">Логин</string>
+    <string name="login_tooltip">Введите логин</string>
+    <string name="password">Пароль</string>
+    <string name="btn_enter">Войти</string>
 </resources>
