@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chanta.myapplication.AddedActivity">
+    tools:context="com.chanta.myapplication.DescribedActivity">
 
     <TextView
         android:id="@+id/title_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_added"
+        android:text="@string/title_described"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -27,25 +27,13 @@
         android:layout_marginTop="8dp"
         android:text="@string/name_added"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/name_editText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093" />
-
-    <EditText
-        android:id="@+id/name_editText"
-        android:layout_width="155dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0."
-        app:layout_constraintLeft_toRightOf="@+id/name_textView"
+        app:layout_constraintVertical_bias="0.112"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintHorizontal_bias="0.518" />
 
     <TextView
         android:id="@+id/describe_textView"
@@ -53,26 +41,13 @@
         android:layout_height="wrap_content"
         android:text="@string/describe_added"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/describe_editText"
         app:layout_constraintTop_toBottomOf="@+id/name_textView"
-        app:layout_constraintVertical_bias="0.123" />
-
-    <EditText
-        android:id="@+id/describe_editText"
-        android:layout_width="155dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.685"
-        app:layout_constraintLeft_toRightOf="@+id/describe_textView"
+        app:layout_constraintVertical_bias="0.079"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_editText"
-        app:layout_constraintVertical_bias="0.073"
-        tools:layout_editor_absoluteX="157dp" />
+        app:layout_constraintHorizontal_bias="0.516" />
 
     <TextView
         android:id="@+id/to_date_name_textView"
@@ -96,7 +71,7 @@
         app:layout_constraintLeft_toRightOf="@+id/to_date_name_textView"
         app:layout_constraintRight_toLeftOf="@+id/to_time_textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
+        app:layout_constraintVertical_bias="0.389" />
 
     <TextView
         android:id="@+id/to_time_textView"
@@ -108,7 +83,7 @@
         app:layout_constraintLeft_toRightOf="@+id/to_date_textView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
+        app:layout_constraintVertical_bias="0.392" />
 
     <TextView
         android:id="@+id/from_date_name_textView"
@@ -120,7 +95,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/from_date_textView"
         app:layout_constraintTop_toBottomOf="@+id/to_date_name_textView"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.145" />
 
     <TextView
         android:id="@+id/from_date_textView"
@@ -152,7 +127,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/participant_spinner"
+        app:layout_constraintRight_toLeftOf="@+id/participants_editText"
         app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"
         app:layout_constraintVertical_bias="0.208" />
 
@@ -163,38 +138,12 @@
         android:text=""
         android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"
-        app:layout_constraintVertical_bias="0.076"
-        tools:layout_editor_absoluteX="114dp" />
+        app:layout_constraintVertical_bias="0.162" />
 
-    <Spinner
-        android:id="@+id/participant_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/list_participants"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.387"
-        app:layout_constraintLeft_toRightOf="@+id/participant_textView"
-        app:layout_constraintRight_toLeftOf="@+id/add_button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
-
-    <Button
-        android:id="@+id/add_button"
-        android:layout_width="41dp"
-        android:layout_height="40dp"
-        android:background="@mipmap/ic_add"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintLeft_toRightOf="@+id/participant_spinner"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709" />
 
     <TextView
         android:id="@+id/priority_textView"
@@ -206,25 +155,25 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/priority_spinner"
         app:layout_constraintTop_toBottomOf="@+id/participant_textView"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.398" />
 
-    <Spinner
+    <TextView
         android:id="@+id/priority_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:entries="@array/list_priorities"
+        android:text="@string/priority"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/priority_textView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.802" />
 
     <Button
-        android:id="@+id/added_button"
+        android:id="@+id/edit_button"
         android:layout_width="123dp"
         android:layout_height="41dp"
-        android:text="@string/add_added"
+        android:text="@string/edit_described"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -9,12 +9,12 @@
     <string name="title_added">Добавить встречу</string>
     <string name="name_added">Название:</string>
     <string name="describe_added">Описание:</string>
-    <string name="to_date_added">Время начала:</string>
-    <string name="from_date_added">Время окончания:</string>
+    <string name="to_date">Время начала:</string>
+    <string name="from_date">Время окончания:</string>
     <string name="date">Дата</string>
     <string name="time">Время</string>
-    <string name="participant_added">Участники:</string>
-    <string name="priority_added">Приоритет:</string>
+    <string name="participant">Участники:</string>
+    <string name="priority">Приоритет:</string>
     <string name="add_added">Добавить</string>
 
     <string-array name="list_priorities">
@@ -29,5 +29,9 @@
         <item>Сидоров</item>
         <item>Попов</item>
     </string-array>
+
+    <string name="title_described">Описание встречи</string>
+    <string name="edit_described">Править</string>
+
 
 </resources>
