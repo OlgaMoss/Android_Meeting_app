@@ -3,28 +3,23 @@ package com.chanta.myapplication;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
-    private List<String> list;
-    private Button button;
+    private ArrayList<String> list;
+    private ImageButton deleteBtn;
     private ArrayAdapter<String> adapter;
 
 
@@ -43,33 +38,93 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-                                           int pos, long id) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                final int positionToRemove = pos;
-                builder.setTitle(R.string.choice_delete)
-                        .setMessage(R.string.choice_delete_text)
-                        .setPositiveButton(R.string.choice_ok, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                list.remove(positionToRemove);
-                                adapter.notifyDataSetChanged();
-                            }
-                        })
-                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
+        deleteBtn = (ImageButton) findViewById(R.id.delete_imageButton);
 
-                AlertDialog dialog = builder.create();
-                dialog.show();
-                return true;
+        //instantiate custom adapter
+        MyCustomAdapter adapter1 = new MyCustomAdapter(list, this);
+
+        //handle listview and assign adapter
+        ListView lView = (ListView) findViewById(R.id.list_translate);
+        lView.setAdapter(adapter1);
+
+
+//        deleteBtn = new setOnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//                final int positionToRemove = (Integer)view.getTag();
+//                builder.setTitle(R.string.choice_delete)
+//                        .setMessage(R.string.choice_delete_text)
+//                        .setPositiveButton(R.string.choice_ok, new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                list.remove(positionToRemove);
+//                                adapter.notifyDataSetChanged();
+//                            }
+//                        })
+//                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                dialog.cancel();
+//                            }
+//                        });
+//
+//                AlertDialog dialog = builder.create();
+//                dialog.show();
+//            }
+//        });
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (view.getId() == R.id.delete_imageButton) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    final int positionToRemove = (Integer) view.getTag();
+                    builder.setTitle(R.string.choice_delete)
+                            .setMessage(R.string.choice_delete_text)
+                            .setPositiveButton(R.string.choice_ok, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    list.remove(positionToRemove);
+                                    adapter.notifyDataSetChanged();
+                                }
+                            })
+                            .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                } else {
+                    Intent intent = new Intent(MainActivity.this, DescribedActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
     }
+
+//    public void onDeleteClick(View view) {
+//        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//        final int positionToRemove = (Integer)view.ge;
+//        builder.setTitle(R.string.choice_delete)
+//                .setMessage(R.string.choice_delete_text)
+//                .setPositiveButton(R.string.choice_ok, new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        list.remove(positionToRemove);
+//                        adapter.notifyDataSetChanged();
+//                    }
+//                })
+//                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.cancel();
+//                    }
+//                });
+//
+//        AlertDialog dialog = builder.create();
+//        dialog.show();
+//    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

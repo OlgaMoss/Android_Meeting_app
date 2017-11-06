@@ -2,9 +2,11 @@
     <string name="app_name">Мои встречи</string>
 
     <string name="login">Логин</string>
-    <string name="login_tooltip">Введите логин</string>
+    <string name="login_tooltip">Введите почту</string>
+    <string name="password_tooltip">Введите пароль</string>
     <string name="password">Пароль</string>
     <string name="btn_enter">Войти</string>
+    <string name="btn_registration">Регистрация</string>
 
     <string name="title_added">Добавить встречу</string>
     <string name="name_added">Название:</string>
@@ -52,6 +54,12 @@
 
     <string name="my_choose_date">Выберите дату</string>
     <string name="ready">Готово</string>
+
+    <string name="signIn">Авторизация прошла успешна!</string>
+    <string name="signOut">Авторизация провалилась!</string>
+
+    <string name="registrationIn">Регистрация прошла успешна!</string>
+    <string name="registrationOut">Пользователь существует!</string>
 
 
 </resources>

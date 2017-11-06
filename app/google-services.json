@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "98953527385",
+    "firebase_url": "https://android-meeting-app.firebaseio.com",
+    "project_id": "android-meeting-app",
+    "storage_bucket": "android-meeting-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98953527385:android:8600dde9c193d90a",
+        "android_client_info": {
+          "package_name": "com.chanta.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98953527385-tlj770q3d1netgvlvk7gehg8mu7vdr30.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chanta.myapplication",
+            "certificate_hash": "203be5bf08916aa29bc9fc9591b02dfe71890d87"
+          }
+        },
+        {
+          "client_id": "98953527385-8r1jgsleanjccf3jn90o12qn0f67a72g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_khQsc0DT9D7I3brxROHzSAYyhlTdShg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98953527385-8r1jgsleanjccf3jn90o12qn0f67a72g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
