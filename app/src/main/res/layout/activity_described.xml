@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/drawer_layout_describe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.chanta.myapplication.DescribedActivity">
@@ -128,12 +128,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/participants_editText"
+        app:layout_constraintRight_toLeftOf="@+id/participants_textView"
         app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"
         app:layout_constraintVertical_bias="0.208" />
 
     <TextView
-        android:id="@+id/participants_editText"
+        android:id="@+id/participants_textView"
         android:layout_width="190dp"
         android:layout_height="41dp"
         android:text=""
@@ -147,25 +147,25 @@
 
 
     <TextView
-        android:id="@+id/priority_textView"
+        android:id="@+id/priority_title_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/priority"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/priority_spinner"
+        app:layout_constraintRight_toLeftOf="@+id/priority_textView"
         app:layout_constraintTop_toBottomOf="@+id/participant_textView"
         app:layout_constraintVertical_bias="0.398" />
 
     <TextView
-        android:id="@+id/priority_spinner"
+        android:id="@+id/priority_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/priority"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/priority_textView"
+        app:layout_constraintLeft_toRightOf="@+id/priority_title_textView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.802" />

@@ -35,6 +35,8 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
+//                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                    startActivity(intent);
                 } else {
                     // User is signed out
                 }
@@ -47,6 +49,13 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
 
         findViewById(R.id.enter_button).setOnClickListener(this);
         findViewById(R.id.registration_button).setOnClickListener(this);
+
+//        FirebaseUser user = mAuth.getInstance().getCurrentUser();
+//
+//        if(user!= null) {
+//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//            startActivity(intent);
+//        }
 
     }
 
@@ -81,7 +90,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 if (task.isSuccessful()) {
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.signIn, Toast.LENGTH_SHORT);
                     toast.show();
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), ListActivity.class);
                     startActivity(intent);
                 } else {
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.signOut, Toast.LENGTH_SHORT);
