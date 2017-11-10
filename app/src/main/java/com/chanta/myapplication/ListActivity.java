@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ListActivity extends AppCompatActivity {
 
-    public static class RoomViewHolder extends RecyclerView.ViewHolder  {
+    public static class RoomViewHolder extends RecyclerView.ViewHolder {
         private TextView nameTextView;
         private TextView describeTextView;
 //        private TextView toDateTextView;
@@ -32,7 +32,6 @@ public class ListActivity extends AppCompatActivity {
 
         public RoomViewHolder(View v) {
             super(v);
-
 
             nameTextView = (TextView) itemView.findViewById(R.id.name);
             describeTextView = (TextView) itemView.findViewById(R.id.description);
@@ -49,23 +48,12 @@ public class ListActivity extends AppCompatActivity {
         }
 
 
-
-
     }
 
     public static final String ROOMS = "meetings";
-    //private String mUsername;
-    //private String mPhotoUrl;
-    //private SharedPreferences mSharedPreferences;
-    //private GoogleApiClient mGoogleApiClient;
-    //public static final String ANONYMOUS = "anonymous";
     private static final String TAG = "ListActivity";
-    //Recycler View Setup
     private RecyclerView mRoomRecyclerView;
     private LinearLayoutManager mLinearLayoutManager;
-    // Firebase instance variables
-    //private FirebaseAuth mFirebaseAuth;
-    //private FirebaseUser mFirebaseUser;
     private DatabaseReference mFirebaseDatabaseReference;
     private FirebaseRecyclerAdapter<Meeting, RoomViewHolder> mFirebaseAdapter;
 
@@ -73,76 +61,11 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        //mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        //mUsername = ANONYMOUS;
-        //Initialize RecyclerView
         mRoomRecyclerView = (RecyclerView) findViewById(R.id.roomRecyclerView);
 
-//        mRoomRecyclerView.addOnItemTouchListener(
-//                new RecyclerItemClickListener(getApplicationContext(), mRoomRecyclerView,
-//                        new RecyclerItemClickListener.OnItemClickListener() {
-//                            @Override
-//                            public void onItemClick(View view, int position) {
-//
-//                                Intent intent = new Intent(getApplication(), DescribedActivity.class);
-//                                startActivity(intent);
-//
-//                            }
-//
-//                            @Override
-//                            public void onItemLongClick(View view, int position) {
-//                                AlertDialog.Builder builder = new AlertDialog.Builder(ListActivity.this);
-////                                final int positionToRemove = (Integer) view.getTag();
-//                                builder.setTitle(R.string.choice_delete)
-//                                        .setMessage(R.string.choice_delete_text)
-//                                        .setPositiveButton(R.string.choice_ok, new DialogInterface.OnClickListener() {
-//                                            public void onClick(DialogInterface dialog, int which) {
-////                                                list.remove(positionToRemove);
-////                                                adapter.notifyDataSetChanged();
-//                                                Meeting person = new Meeting();
-//                                                //Adding values
-//                                                person.setName("встреча 4");
-//                                                person.setDescription("rrrr");
-//                                                DatabaseReference newRef = mFirebaseDatabaseReference.child(ROOMS).push();
-//                                                newRef.setValue(person);
-//                                            }
-//                                        })
-//                                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-//                                            public void onClick(DialogInterface dialog, int which) {
-//                                                dialog.cancel();
-//                                            }
-//                                        });
-//
-//                                AlertDialog dialog = builder.create();
-//                                dialog.show();
-//                            }
-//
-//                        })
-//        );
         mLinearLayoutManager = new LinearLayoutManager(this);
         mLinearLayoutManager.setStackFromEnd(true);
-        // Initialize Firebase Auth
-        /*
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        if (mFirebaseUser == null) {
-            // Not signed in, launch the Sign In activity
-            startActivity(new Intent(this, SignInActivity.class));
-            finish();
-            return;
-        } else {
-            mUsername = mFirebaseUser.getDisplayName();
-            if (mFirebaseUser.getPhotoUrl() != null) {
-                mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
-            }
-        }
 
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this, this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API)
-                .build();
-        */
-        //Database Initialization
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         final Intent intent = getIntent();
@@ -176,9 +99,6 @@ public class ListActivity extends AppCompatActivity {
 //                viewHolder.participantsTextView.setText(model.getParticipant());
 //                viewHolder.priorityTextView.setText(model.getPriority());
 
-//                viewHolder.roomName.setText(model.getName());
-//                viewHolder.roomAddress.setText(model.getAddress());
-//                viewHolder.roomUrl.setText(model.getUrl());
                 viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View view) {
@@ -188,15 +108,6 @@ public class ListActivity extends AppCompatActivity {
                                 .setMessage(R.string.choice_delete_text)
                                 .setPositiveButton(R.string.choice_ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
-//                                                list.remove(positionToRemove);
-//                                                adapter.notifyDataSetChanged();
-//                                        Meeting person = new Meeting();
-//                                        //Adding values
-//                                        person.setName("встреча 4");
-//                                        person.setDescription("rrrr");
-//
-//                                        DatabaseReference newRef = mFirebaseDatabaseReference.child(ROOMS).push();
-//                                        newRef.setValue(person);
                                         DatabaseReference itemRef = getRef(position);
                                         itemRef.removeValue();
                                     }
@@ -291,7 +202,6 @@ public class ListActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }

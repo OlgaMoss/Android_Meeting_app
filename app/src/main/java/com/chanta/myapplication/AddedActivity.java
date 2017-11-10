@@ -4,8 +4,6 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -104,8 +102,8 @@ public class AddedActivity extends AppCompatActivity implements View.OnClickList
 
                     intentNew.putExtra("name", nameEditText.getText().toString());
                     intentNew.putExtra("describe", describeEditText.getText().toString());
-                    intentNew.putExtra("dateTo", txtDateTo.getText().toString() + " "+ txtTimeTo.getText().toString());
-                    intentNew.putExtra("dateFrom", txtDateFrom.getText().toString() + " "+ txtTimeFrom.getText().toString());
+                    intentNew.putExtra("dateTo", txtDateTo.getText().toString() + " " + txtTimeTo.getText().toString());
+                    intentNew.putExtra("dateFrom", txtDateFrom.getText().toString() + " " + txtTimeFrom.getText().toString());
                     intentNew.putExtra("participants", participantsEditText.getText().toString());
                     intentNew.putExtra("priority", prioritySpinner.getSelectedItem().toString());
 
@@ -201,13 +199,4 @@ public class AddedActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
-//    }
 }
