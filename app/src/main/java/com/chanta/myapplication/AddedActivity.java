@@ -14,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.google.firebase.database.DatabaseReference;
+
 import java.util.Calendar;
 
 public class AddedActivity extends AppCompatActivity implements View.OnClickListener {
@@ -56,7 +58,9 @@ public class AddedActivity extends AppCompatActivity implements View.OnClickList
         participantsEditText = (EditText) findViewById(R.id.participant_editText);
         prioritySpinner = (Spinner) findViewById(R.id.priority_spinner);
 
-        Intent intent = getIntent();
+        button = (Button) findViewById(R.id.added_button);
+
+        final Intent intent = getIntent();
         final Intent intentNew = getIntent();
 
         if (intent.getStringExtra("isNew").contains("true")) {
@@ -92,7 +96,6 @@ public class AddedActivity extends AppCompatActivity implements View.OnClickList
                 }
             });
 
-            button = (Button) findViewById(R.id.added_button);
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -126,6 +129,10 @@ public class AddedActivity extends AppCompatActivity implements View.OnClickList
 
         } else {
 
+            button.setText("Изменить");
+
+
+
             nameEditText.setHint(intent.getStringExtra("name"));
             describeEditText.setHint(intent.getStringExtra("description"));
             txtDateTo.setText(intent.getStringExtra("toDate"));
@@ -133,6 +140,34 @@ public class AddedActivity extends AppCompatActivity implements View.OnClickList
             txtDateFrom.setText(intent.getStringExtra("fromDate"));
             txtTimeFrom.setText(intent.getStringExtra("fromTime"));
             participantsTextView.setText(intent.getStringExtra("participant"));
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intentNew = new Intent(getApplication(), ListActivity.class);
+                    intentNew.putExtra("isChange", true);
+
+                    intentNew.putExtra("key", intent.getStringExtra("key"));
+                    intentNew.putExtra("name", nameEditText.getText().toString());
+                    intentNew.putExtra("describe", describeEditText.getText().toString());
+                    intentNew.putExtra("dateTo", txtDateTo.getText().toString() + " " + txtTimeTo.getText().toString());
+                    intentNew.putExtra("dateFrom", txtDateFrom.getText().toString() + " " + txtTimeFrom.getText().toString());
+                    intentNew.putExtra("participants", participantsEditText.getText().toString());
+                    intentNew.putExtra("priority", prioritySpinner.getSelectedItem().toString());
+
+//                    intentNew.putExtra("name", nameEditText.getText().toString());
+//                    intentNew.putExtra("describe", describeEditText.getText().toString());
+//                    intentNew.putExtra("dateTo", txtDateTo.getText().toString());
+//                    intentNew.putExtra("timeTo", txtTimeTo.getText().toString());
+//                    intentNew.putExtra("dateFrom", txtDateFrom.getText().toString());
+//                    intentNew.putExtra("timeFrom",  txtTimeFrom.getText().toString());
+//                    intentNew.putExtra("participants", participantsEditText.getText().toString());
+//                    intentNew.putExtra("priority", prioritySpinner.getSelectedItem().toString());
+
+                    startActivity(intentNew);
+                }
+            });
 
 //            txtDateTo = (TextView) findViewById(R.id.to_date_textView);
 //            txtTimeTo = (TextView) findViewById(R.id.to_time_textView);

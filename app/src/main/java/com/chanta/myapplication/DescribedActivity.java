@@ -41,6 +41,39 @@ public class DescribedActivity extends AppCompatActivity {
         participantsTextView = (TextView) findViewById(R.id.participants_textView);
         priorityTextView = (TextView) findViewById(R.id.priority_textView);
 
+        button = (Button) findViewById(R.id.edit_button);
+
+//        if (intent.hasExtra("isChange")) {
+//
+//            nameTextView.setText(intent.getStringExtra("name"));
+//            describeTextView.setText(intent.getStringExtra("describe"));
+//            toDateTextView.setText(intent.getStringExtra("dateTo"));
+//            toTimeTextView.setText(intent.getStringExtra("timeTo"));
+//            fromDateTextView.setText(intent.getStringExtra("dateFrom"));
+//            fromTimeTextView.setText(intent.getStringExtra("timeFrom"));
+//            participantsTextView.setText(intent.getStringExtra("participants"));
+//            priorityTextView.setText(intent.getStringExtra("priority"));
+//
+//            button.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intentNew = new Intent(getApplication(), AddedActivity.class);
+//
+//                    intentNew.putExtra("isNew", "false");
+//
+//                    intentNew.putExtra("name", intent.getStringExtra("name"));
+//                    intentNew.putExtra("description", intent.getStringExtra("describe"));
+//                    intentNew.putExtra("toDate",intent.getStringExtra("dateTo"));
+//                    intentNew.putExtra("toTime", intent.getStringExtra("timeTo"));
+//                    intentNew.putExtra("fromDate", intent.getStringExtra("dateFrom"));
+//                    intentNew.putExtra("fromTime", intent.getStringExtra("timeFrom"));
+//                    intentNew.putExtra("participant", intent.getStringExtra("participants"));
+//                    intentNew.putExtra("priority", intent.getStringExtra("priority"));
+//                    startActivity(intentNew);
+//                }
+//            });
+//        } else {
+
         nameTextView.setText(intent.getStringExtra("name"));
         describeTextView.setText(intent.getStringExtra("description"));
         toDateTextView.setText(intent.getStringExtra("toDate").split(" ")[0]);
@@ -50,7 +83,6 @@ public class DescribedActivity extends AppCompatActivity {
         participantsTextView.setText(intent.getStringExtra("participant"));
         priorityTextView.setText(intent.getStringExtra("priority"));
 
-        button = (Button) findViewById(R.id.edit_button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +91,7 @@ public class DescribedActivity extends AppCompatActivity {
 
                 intentNew.putExtra("isNew", "false");
 
+                intentNew.putExtra("key", intent.getStringExtra("key"));
                 intentNew.putExtra("name", intent.getStringExtra("name"));
                 intentNew.putExtra("description", intent.getStringExtra("description"));
                 intentNew.putExtra("toDate", intent.getStringExtra("toDate").split(" ")[0]);
@@ -70,8 +103,10 @@ public class DescribedActivity extends AppCompatActivity {
                 startActivity(intentNew);
             }
         });
-
+//        }
     }
 
-
 }
+
+
+

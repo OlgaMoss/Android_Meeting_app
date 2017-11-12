@@ -41,7 +41,9 @@
 
 
     <string name="title_described">Описание встречи</string>
-    <string name="edit_described">Править</string>
+    <string name="edit_described">Изменить</string>
+
+    <string name="meetings_added">Встреча добавлена.</string>
 
     <string name="text_search">Введите слово</string>
 
