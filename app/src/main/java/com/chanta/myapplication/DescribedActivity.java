@@ -2,13 +2,26 @@ package com.chanta.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.chanta.myapplication.activity.BaseActivity;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-public class DescribedActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+
+public class DescribedActivity extends BaseActivity {
+
+    private static final String TAG = "DescribedActivity";
+
+    public static final String EXTRA_MEETING_KEY = "meeting_key";
+
+    private DatabaseReference mDatabase, mMeetingRef, mMeetingGlobalRef;
+    private ValueEventListener mMeetingListener;
+
 
 
     private TextView nameTextView;
@@ -22,6 +35,12 @@ public class DescribedActivity extends AppCompatActivity {
 
     private Button button;
 
+    private ArrayList<String> name;
+    private ArrayList<String> middle;
+    private ArrayList<String> lastName;
+    private ArrayList<String> position;
+    private ArrayList<String> number;
+
     public DescribedActivity() {
     }
 
@@ -31,48 +50,26 @@ public class DescribedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_described);
         final Intent intent = getIntent();
 
+        String mMeetingKey = getIntent().getStringExtra(EXTRA_MEETING_KEY);
+        if (mMeetingKey == null) {
+            throw new IllegalArgumentException("Must pass EXTRA_MEETING_KEY");
+        }
 
-        nameTextView = (TextView) findViewById(R.id.name_textView);
-        describeTextView = (TextView) findViewById(R.id.describe_textView);
-        toDateTextView = (TextView) findViewById(R.id.to_date_textView);
-        toTimeTextView = (TextView) findViewById(R.id.to_time_textView);
-        fromDateTextView = (TextView) findViewById(R.id.from_date_textView);
-        fromTimeTextView = (TextView) findViewById(R.id.from_time_textView);
-        participantsTextView = (TextView) findViewById(R.id.participants_textView);
-        priorityTextView = (TextView) findViewById(R.id.priority_textView);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mMeetingRef = mDatabase.child("meetings").child(mMeetingKey);
+        mMeetingGlobalRef = mDatabase.child("participant-meetings").child(getUid()).child(mMeetingKey);
 
-        button = (Button) findViewById(R.id.edit_button);
 
-//        if (intent.hasExtra("isChange")) {
-//
-//            nameTextView.setText(intent.getStringExtra("name"));
-//            describeTextView.setText(intent.getStringExtra("describe"));
-//            toDateTextView.setText(intent.getStringExtra("dateTo"));
-//            toTimeTextView.setText(intent.getStringExtra("timeTo"));
-//            fromDateTextView.setText(intent.getStringExtra("dateFrom"));
-//            fromTimeTextView.setText(intent.getStringExtra("timeFrom"));
-//            participantsTextView.setText(intent.getStringExtra("participants"));
-//            priorityTextView.setText(intent.getStringExtra("priority"));
-//
-//            button.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Intent intentNew = new Intent(getApplication(), AddedActivity.class);
-//
-//                    intentNew.putExtra("isNew", "false");
-//
-//                    intentNew.putExtra("name", intent.getStringExtra("name"));
-//                    intentNew.putExtra("description", intent.getStringExtra("describe"));
-//                    intentNew.putExtra("toDate",intent.getStringExtra("dateTo"));
-//                    intentNew.putExtra("toTime", intent.getStringExtra("timeTo"));
-//                    intentNew.putExtra("fromDate", intent.getStringExtra("dateFrom"));
-//                    intentNew.putExtra("fromTime", intent.getStringExtra("timeFrom"));
-//                    intentNew.putExtra("participant", intent.getStringExtra("participants"));
-//                    intentNew.putExtra("priority", intent.getStringExtra("priority"));
-//                    startActivity(intentNew);
-//                }
-//            });
-//        } else {
+        nameTextView = findViewById(R.id.name_textView);
+        describeTextView = findViewById(R.id.describe_textView);
+        toDateTextView = findViewById(R.id.to_date_textView);
+        toTimeTextView = findViewById(R.id.to_time_textView);
+        fromDateTextView = findViewById(R.id.from_date_textView);
+        fromTimeTextView = findViewById(R.id.from_time_textView);
+        participantsTextView = findViewById(R.id.participants_textView);
+        priorityTextView = findViewById(R.id.priority_textView);
+
+        button = findViewById(R.id.edit_button);
 
         nameTextView.setText(intent.getStringExtra("name"));
         describeTextView.setText(intent.getStringExtra("description"));
@@ -80,30 +77,42 @@ public class DescribedActivity extends AppCompatActivity {
         toTimeTextView.setText(intent.getStringExtra("toDate").split(" ")[1]);
         fromDateTextView.setText(intent.getStringExtra("fromDate").split(" ")[0]);
         fromTimeTextView.setText(intent.getStringExtra("fromDate").split(" ")[1]);
-        participantsTextView.setText(intent.getStringExtra("participant"));
         priorityTextView.setText(intent.getStringExtra("priority"));
 
+        name.addAll(intent.getStringArrayListExtra("firstName"));
+        middle.addAll(intent.getStringArrayListExtra("lastName"));
+        lastName.addAll(intent.getStringArrayListExtra("middleName"));
+        position.addAll(intent.getStringArrayListExtra("numbers"));
+        number.addAll(intent.getStringArrayListExtra("position"));
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentNew = new Intent(getApplication(), AddedActivity.class);
+        participantsTextView.setText(lastName.toString());
 
-                intentNew.putExtra("isNew", "false");
+        button.setOnClickListener(view -> {
+           /* Intent intent = new Intent(this, NewMeetingActivity.class);
+            meeting.setKey(mMeetingRef.getKey());
+            intent.putExtra(NewMeetingActivity.SOURCE_MEETING_KEY, meeting);
+            startActivity(intent);*/
+            Intent intentNew = new Intent(getApplication(), AddedActivity.class);
 
-                intentNew.putExtra("key", intent.getStringExtra("key"));
-                intentNew.putExtra("name", intent.getStringExtra("name"));
-                intentNew.putExtra("description", intent.getStringExtra("description"));
-                intentNew.putExtra("toDate", intent.getStringExtra("toDate").split(" ")[0]);
-                intentNew.putExtra("toTime", intent.getStringExtra("toDate").split(" ")[1]);
-                intentNew.putExtra("fromDate", intent.getStringExtra("fromDate").split(" ")[0]);
-                intentNew.putExtra("fromTime", intent.getStringExtra("fromDate").split(" ")[1]);
-                intentNew.putExtra("participant", intent.getStringExtra("participant"));
-                intentNew.putExtra("priority", intent.getStringExtra("priority"));
-                startActivity(intentNew);
-            }
+            intentNew.putExtra("isNew", "false");
+
+            intentNew.putExtra("key", intent.getStringExtra("key"));
+            intentNew.putExtra("name", intent.getStringExtra("name"));
+            intentNew.putExtra("description", intent.getStringExtra("description"));
+            intentNew.putExtra("toDate", intent.getStringExtra("toDate").split(" ")[0]);
+            intentNew.putExtra("toTime", intent.getStringExtra("toDate").split(" ")[1]);
+            intentNew.putExtra("fromDate", intent.getStringExtra("fromDate").split(" ")[0]);
+            intentNew.putExtra("fromTime", intent.getStringExtra("fromDate").split(" ")[1]);
+//                intentNew.putExtra("participant", intent.getStringExtra("participant"));
+            intentNew.putExtra("priority", intent.getStringExtra("priority"));
+
+            intentNew.putStringArrayListExtra("firstName", name);
+            intentNew.putStringArrayListExtra("lastName", lastName);
+            intentNew.putStringArrayListExtra("middleName", middle);
+            intentNew.putStringArrayListExtra("numbers", number);
+            intentNew.putStringArrayListExtra("position", position);
+            startActivity(intentNew);
         });
-//        }
     }
 
 }

@@ -124,7 +124,7 @@
         android:id="@+id/participant_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/participant"
+        android:text="@string/participants"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -171,8 +171,8 @@
         app:layout_constraintVertical_bias="0.802" />
 
     <Button
-        android:id="@+id/edit_button"
-        android:layout_width="123dp"
+        android:id="@+id/edit_button1"
+        android:layout_width="0dp"
         android:layout_height="41dp"
         android:text="@string/edit_described"
         app:layout_constraintBottom_toBottomOf="parent"

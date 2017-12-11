@@ -7,239 +7,244 @@
     android:layout_height="match_parent"
     tools:context="com.chanta.myapplication.AddedActivity">
 
-    <TextView
-        android:id="@+id/title_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_added"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
 
-    <TextView
-        android:id="@+id/name_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constrain_layout"
+                android:layout_width="304dp"
+                android:layout_height="437dp">
 
-        android:layout_marginTop="8dp"
-        android:text="@string/name_added"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/name_editText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093" />
+                <TextView
+                    android:id="@+id/title_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_added"
 
-    <EditText
-        android:id="@+id/name_editText"
-        android:layout_width="155dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0."
-        app:layout_constraintLeft_toRightOf="@+id/name_textView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.036" />
 
-    <TextView
-        android:id="@+id/describe_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/describe_added"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/describe_editText"
-        app:layout_constraintTop_toBottomOf="@+id/name_textView"
-        app:layout_constraintVertical_bias="0.123" />
 
-    <EditText
-        android:id="@+id/describe_editText"
-        android:layout_width="155dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.685"
-        app:layout_constraintLeft_toRightOf="@+id/describe_textView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_editText"
-        app:layout_constraintVertical_bias="0.073"
-        tools:layout_editor_absoluteX="157dp" />
+                <EditText
+                    android:id="@+id/name_editText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/name_added"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.095" />
 
-    <TextView
-        android:id="@+id/to_date_name_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to_date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/to_date_textView"
-        app:layout_constraintTop_toBottomOf="@+id/describe_textView"
-        app:layout_constraintVertical_bias="0.142" />
 
-    <TextView
-        android:id="@+id/to_date_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date"
-        android:clickable="true"
-        android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintLeft_toRightOf="@+id/to_date_name_textView"
-        app:layout_constraintRight_toLeftOf="@+id/to_time_textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
+                <EditText
+                    android:id="@+id/describe_editText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/describe_added"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.685"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name_editText"
+                    app:layout_constraintVertical_bias="0.073" />
 
-    <TextView
-        android:id="@+id/to_time_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/time"
-        android:clickable="true"
-        android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintLeft_toRightOf="@+id/to_date_textView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
+                <TextView
+                    android:id="@+id/to_date_name_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/to_date_textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.392" />
 
-    <TextView
-        android:id="@+id/from_date_name_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/from_date"
-        android:clickable="true"
-        android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/from_date_textView"
-        app:layout_constraintTop_toBottomOf="@+id/to_date_name_textView"
-        app:layout_constraintVertical_bias="0.117" />
+                <TextView
+                    android:id="@+id/to_date_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:text="@string/date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.545"
+                    app:layout_constraintLeft_toRightOf="@+id/to_date_name_textView"
+                    app:layout_constraintRight_toLeftOf="@+id/to_time_textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.394" />
 
-    <TextView
-        android:id="@+id/from_date_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date"
-        android:clickable="true"
-        android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
-        app:layout_constraintLeft_toRightOf="@+id/from_date_name_textView"
-        app:layout_constraintRight_toLeftOf="@+id/from_time_textView"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/to_time_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:text="@string/time"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.845"
+                    app:layout_constraintLeft_toRightOf="@+id/to_date_textView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.389" />
 
-    <TextView
-        android:id="@+id/from_time_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/time"
-        android:clickable="true"
-        android:onClick="onClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintLeft_toRightOf="@+id/from_date_textView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/from_date_name_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:text="@string/from_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/from_date_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/to_date_name_textView"
+                    app:layout_constraintVertical_bias="0.117" />
 
-    <TextView
-        android:id="@+id/participant_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/participant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/participant_editText"
-        app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"
-        app:layout_constraintVertical_bias="0.208" />
+                <TextView
+                    android:id="@+id/from_date_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:text="@string/date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.19"
+                    app:layout_constraintLeft_toRightOf="@+id/from_date_name_textView"
+                    app:layout_constraintRight_toLeftOf="@+id/from_time_textView"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/participants_textView"
-        android:layout_width="190dp"
-        android:layout_height="41dp"
-        android:text=""
-        android:background="@drawable/border"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"
-        app:layout_constraintVertical_bias="0.076"
-        tools:layout_editor_absoluteX="114dp" />
+                <TextView
+                    android:id="@+id/from_time_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:text="@string/time"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.845"
+                    app:layout_constraintLeft_toRightOf="@+id/from_date_textView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/participant_editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/participant"
+                <TextView
+                    android:id="@+id/participant_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/participants"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"
+                    app:layout_constraintVertical_bias="0.243"
+                    app:layout_constraintRight_toLeftOf="@+id/participants_textView"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintHorizontal_bias="0.941"
+                    android:layout_marginEnd="8dp" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.387"
-        app:layout_constraintLeft_toRightOf="@+id/participant_textView"
-        app:layout_constraintRight_toLeftOf="@+id/add_button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
+                <ListView
+                    android:id="@+id/participants_textView"
+                    android:layout_width="134dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border"
 
-    <Button
-        android:id="@+id/add_button"
-        android:layout_width="41dp"
-        android:layout_height="40dp"
-        android:background="@mipmap/ic_add"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintLeft_toRightOf="@+id/participant_editText"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709" />
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"
+                    app:layout_constraintVertical_bias="0.045"
+                    tools:layout_editor_absoluteX="91dp" />
 
-    <TextView
-        android:id="@+id/priority_title_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/priority"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/priority_spinner"
-        app:layout_constraintTop_toBottomOf="@+id/participant_textView"
-        app:layout_constraintVertical_bias="0.433" />
+                <!--<TextView-->
+                    <!--android:id="@+id/participants_textView"-->
+                    <!--android:layout_width="134dp"-->
+                    <!--android:layout_height="90dp"-->
+                    <!--android:background="@drawable/border"-->
+                    <!--android:text=""-->
+                    <!--app:layout_constraintBottom_toBottomOf="@+id/constrain_layout"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/from_date_name_textView"-->
+                    <!--app:layout_constraintVertical_bias="0.09"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--app:layout_constraintRight_toLeftOf="@+id/add_button"-->
+                    <!--tools:layout_editor_absoluteX="97dp" />-->
 
-    <Spinner
-        android:id="@+id/priority_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/list_priorities"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/priority_title_textView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
 
-    <Button
-        android:id="@+id/added_button"
-        android:layout_width="123dp"
-        android:layout_height="41dp"
-        android:text="@string/add_added"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956" />
+                <Button
+                    android:id="@+id/add_button"
+                    android:layout_width="48dp"
+                    android:layout_height="45dp"
+                    android:text=""
+                    android:background="@mipmap/ic_add"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.937"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.673"
+                    tools:layout_editor_absoluteX="243dp" />
+
+                <TextView
+                    android:id="@+id/priority_title_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priority"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/priority_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/participant_textView"
+                    app:layout_constraintVertical_bias="0.417" />
+
+                <Spinner
+                    android:id="@+id/priority_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/list_priorities"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toRightOf="@+id/priority_title_textView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.827" />
+
+                <Button
+                    android:id="@+id/added_button"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:text="@string/add_added"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.551"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.956" />
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

@@ -9,13 +9,14 @@
     <string name="btn_registration">Регистрация</string>
 
     <string name="title_added">Добавить встречу</string>
-    <string name="name_added">Название:</string>
-    <string name="describe_added">Описание:</string>
+    <string name="name_added">Название</string>
+    <string name="describe_added">Описание</string>
     <string name="to_date">Время начала:</string>
     <string name="from_date">Время окончания:</string>
     <string name="date">Дата</string>
     <string name="time">Время</string>
-    <string name="participant">Участники:</string>
+    <string name="participants">Участники</string>
+    <string name="participant">Участник</string>
     <string name="priority">Приоритет:</string>
     <string name="add_added">Добавить</string>
 
@@ -62,6 +63,25 @@
 
     <string name="registrationIn">Регистрация прошла успешна!</string>
     <string name="registrationOut">Пользователь существует!</string>
+    <string name="first_name">Имя</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="last_name">Фамилия</string>
+    <string name="middle_name">Отчество</string>
+    <string name="number">Номер</string>
+    <string name="loginI">Логин*</string>
+    <string name="passwordI">Пароль*</string>
+    <string name="necessarily">*Обязательно</string>
+    <string name="btn_sign_in">Зарегистрироваться</string>
+    <string name="position">Должность</string>
+    <string name="edit">Изменить</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="heading_meetings">Недавние</string>
+    <string name="heading_my_meetings">Мои встречи</string>
+    <string name="menu_log_out">Выход</string>
+    <string name="default_text">description</string>
+    <string name="added_participate">Добавиться</string>
 
 
 </resources>

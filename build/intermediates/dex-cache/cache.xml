@@ -2,6 +2,285 @@
 <items version="2" >
 
     <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/18e3bd51325e59d0c5c1b5be6af8565e2c10e732/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3fc3d3f3132c6ab109d047a42fe8f59097102af3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/8ce4a11d001db41f49fda194011b0090393da707/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a3faea98ad7f49d80abc4d2993efa7b1b3e38891/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/b3d8fc67386c6865247dc4abe0af67b81effe9f0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bd917ae9c283f0f408f2115ba481b17230a0c2d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/96e4a91a1e7b0d5cdc1ccc2f0db385fe11dd2ce1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_67d99c17ac04e5170dde05a920107785624f808e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/c0c2c4c08da7af9122087a1f05d2bf9fb715e9e8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e1e2976d348f1128af2f2bfcb1996c7c0cda257b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/c2e3d50d595d500329ac7b4f7e286818469bb9cf/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_02506be317e9fa968e0ab14dd364fb4ad7a2f511/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/68d47f0f08701d0dc3806563ca5ff81c46fdadc5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_88042da27c39440cea6e785543bf2c2e0cc88df9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/5321855963425f8949a6dac58562f2c29252786a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_e8552c1617f8f625dc8a4638a122350ebf894eaa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_cfd938408d54dc6929ef146eaa01dc6a5e96b1e5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/e9cfd881a870f261149622c6e7cb00e7705582f4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_86057769e48b6eb9c83d389c7447618f3dcedc90/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/c15ca8f8b9742f4ef5036c19f0e6c74bff727851/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a5193ddd2bd3e33de9e4c6f7b7183669ffaef695/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/12dd5394ed5a81d7a794ca9a1e6d5a0ec0badc0a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7fa1c1b9175131d1dbe340d547ce5232da153851/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_3f7a407cd135c1a3ac7d7019f9ab54982193ea48/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/d7bb437cb76fe74e0a46c86eef566411dd621396/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_f45cb90acc91d040334d5434a17f6046f0e23733.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/96e4a91a1e7b0d5cdc1ccc2f0db385fe11dd2ce1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_67d99c17ac04e5170dde05a920107785624f808e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/e6ef04c44cfe219451a0050826df8b3c811d2691/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_0761829438c05527b98e202886454ff061da2463.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/bf4423af3184f192a035eea6b17754aec7c3df70/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_60fda0532a4f045289c3a715bdd50603fe7f811a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/6b3a4b1dc1e9f47935d09f4570499edfd3e271b5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_180b01c47cccf94cbec095d279d007b5a491372d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/8ce4a11d001db41f49fda194011b0090393da707/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_a3faea98ad7f49d80abc4d2993efa7b1b3e38891.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/bc5da41092507105aaed5a229585684ed095bde7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d24c52a52adcbb64d756f0ad706d43267ec1d209/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/701da67420fb5e0aa374c277953ef31deed63675/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_52abde0525deaad1751bb4c6ff01bc2f0d991ebe.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/a9bc822df9e82b1825d1a5d7efbef989811deba8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_261b3532dee75d690c76d1545e8bb35b4e87e229/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/181e0d5eccb4c90e6257cf962cb93dcf36905985/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_99544a4ef058540af3548e0846d7fe19e219af71/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/151cac2db89c7a5b77015cbbc2b2b48504951a82/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_6a39f1839f0e62298b262220c71e514bfb581ba1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/181e0d5eccb4c90e6257cf962cb93dcf36905985/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_99544a4ef058540af3548e0846d7fe19e219af71.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/c3c62e44cfe8586dc9335c78adcb60e3eca657a6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4e7ccc1d51d89540ea7ad426a1934204b674939b">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9187a0d534635c17c72efdc13444ddd44b7df7f6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/468cb435e0e118d1a1b159d0645abf8621e34dff/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_8ccd12af5a5f4c895019860fc06ce9563f512ab5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/495c1c92d07ad93a5b4132c7e7e5a6e1ed748ffc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_6bbe724e9b3e0a26444b04e49a37c2f199056a9a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/chanta/.android/build-cache/e6ef04c44cfe219451a0050826df8b3c811d2691/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_0761829438c05527b98e202886454ff061da2463.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/468cb435e0e118d1a1b159d0645abf8621e34dff/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8ccd12af5a5f4c895019860fc06ce9563f512ab5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/68d47f0f08701d0dc3806563ca5ff81c46fdadc5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_88042da27c39440cea6e785543bf2c2e0cc88df9/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/chanta/.android/build-cache/18e3bd51325e59d0c5c1b5be6af8565e2c10e732/output/jars/classes.jar"
         jumboMode="false"
@@ -38,6 +317,15 @@
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_e1e2976d348f1128af2f2bfcb1996c7c0cda257b.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_c935aa25b99df6f096e73bc4cc4e80d9ca3f27c7/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/chanta/.android/build-cache/c2e3d50d595d500329ac7b4f7e286818469bb9cf/output/jars/classes.jar"
         jumboMode="false"
@@ -66,15 +354,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/68d47f0f08701d0dc3806563ca5ff81c46fdadc5/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_88042da27c39440cea6e785543bf2c2e0cc88df9.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/chanta/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
         jumboMode="false"
         optimize="true"
@@ -92,22 +371,13 @@
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_6bbe724e9b3e0a26444b04e49a37c2f199056a9a.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/5321855963425f8949a6dac58562f2c29252786a/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/d7bb437cb76fe74e0a46c86eef566411dd621396/output/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_e8552c1617f8f625dc8a4638a122350ebf894eaa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chanta/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_cfd938408d54dc6929ef146eaa01dc6a5e96b1e5.jar" />
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f45cb90acc91d040334d5434a17f6046f0e23733/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -119,22 +389,13 @@
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_86057769e48b6eb9c83d389c7447618f3dcedc90.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/d7bb437cb76fe74e0a46c86eef566411dd621396/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chanta/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_f45cb90acc91d040334d5434a17f6046f0e23733.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/96e4a91a1e7b0d5cdc1ccc2f0db385fe11dd2ce1/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_67d99c17ac04e5170dde05a920107785624f808e.jar" />
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_cfd938408d54dc6929ef146eaa01dc6a5e96b1e5/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -146,22 +407,31 @@
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_a5193ddd2bd3e33de9e4c6f7b7183669ffaef695.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/e6ef04c44cfe219451a0050826df8b3c811d2691/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
-        revision="26.0.1"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_0761829438c05527b98e202886454ff061da2463.jar" />
+        revision="26.0.2"
+        sha1="c500c3c7b3c5cc0ab588044acd786d0b416a63ef">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d40c5b9eb4127a177f3d699ad1b430dc5ef708d5/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/Users/chanta/.android/build-cache/bf4423af3184f192a035eea6b17754aec7c3df70/output/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
         sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_60fda0532a4f045289c3a715bdd50603fe7f811a.jar" />
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_60fda0532a4f045289c3a715bdd50603fe7f811a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/5321855963425f8949a6dac58562f2c29252786a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e8552c1617f8f625dc8a4638a122350ebf894eaa/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -173,22 +443,13 @@
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_d24c52a52adcbb64d756f0ad706d43267ec1d209.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/6b3a4b1dc1e9f47935d09f4570499edfd3e271b5/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/701da67420fb5e0aa374c277953ef31deed63675/output/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_180b01c47cccf94cbec095d279d007b5a491372d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/8ce4a11d001db41f49fda194011b0090393da707/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_a3faea98ad7f49d80abc4d2993efa7b1b3e38891.jar" />
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_52abde0525deaad1751bb4c6ff01bc2f0d991ebe/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -200,13 +461,13 @@
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_02506be317e9fa968e0ab14dd364fb4ad7a2f511.jar" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/701da67420fb5e0aa374c277953ef31deed63675/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/6b3a4b1dc1e9f47935d09f4570499edfd3e271b5/output/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_52abde0525deaad1751bb4c6ff01bc2f0d991ebe.jar" />
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_180b01c47cccf94cbec095d279d007b5a491372d/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -236,13 +497,22 @@
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_261b3532dee75d690c76d1545e8bb35b4e87e229.jar" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/495c1c92d07ad93a5b4132c7e7e5a6e1ed748ffc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6bbe724e9b3e0a26444b04e49a37c2f199056a9a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/chanta/.android/build-cache/151cac2db89c7a5b77015cbbc2b2b48504951a82/output/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="26.0.2"
         sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_6a39f1839f0e62298b262220c71e514bfb581ba1.jar" />
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6a39f1839f0e62298b262220c71e514bfb581ba1/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -255,21 +525,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/181e0d5eccb4c90e6257cf962cb93dcf36905985/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_99544a4ef058540af3548e0846d7fe19e219af71.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/chanta/.android/build-cache/c3c62e44cfe8586dc9335c78adcb60e3eca657a6/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="4e7ccc1d51d89540ea7ad426a1934204b674939b">
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_9187a0d534635c17c72efdc13444ddd44b7df7f6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/chanta/.android/build-cache/e6ef04c44cfe219451a0050826df8b3c811d2691/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0761829438c05527b98e202886454ff061da2463/classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -279,33 +549,6 @@
         revision="26.0.1"
         sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
         <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_60fda0532a4f045289c3a715bdd50603fe7f811a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/468cb435e0e118d1a1b159d0645abf8621e34dff/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_8ccd12af5a5f4c895019860fc06ce9563f512ab5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/495c1c92d07ad93a5b4132c7e7e5a6e1ed748ffc/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_6bbe724e9b3e0a26444b04e49a37c2f199056a9a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/chanta/.android/build-cache/e6ef04c44cfe219451a0050826df8b3c811d2691/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/Users/chanta/myGitHub/Android_Meeting_app/app/build/intermediates/pre-dexed/debug/classes_0761829438c05527b98e202886454ff061da2463.jar" />
     </item>
     <item
         is-multidex="false"

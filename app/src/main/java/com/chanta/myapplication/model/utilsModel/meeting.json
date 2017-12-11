@@ -1,0 +1,51 @@
+{
+  "meetings": {
+    "-K2ib4H77rj0LYewF7dP": {
+      "name": "Встреча 1",
+      "description": "Приветствие",
+      "dateTo": "2012-09-26 14:23",
+      "dateFrom": "2012-09-26 17:23",
+      "participants": "true",
+      "priority": "срочная"
+    },
+    "-K2ib5JHRbbL0NrztUfO": {
+      "name": "Встреча 2",
+      "description": "Приветствие 2",
+      "dateTo": "2012-09-27 14:23",
+      "dateFrom": "2012-09-27 17:23",
+      "participants": "true",
+      "priority": "плановая"
+    },
+    "-K2ib62mjHh34CAUbide": {
+      "name": "Встреча 3",
+      "description": "Приветствие 3",
+      "dateTo": "2012-09-29 14:23",
+      "dateFrom": "2012-09-29 17:23",
+      "participants": "true",
+      "priority": "плановая"
+    }
+  },
+  "participants": {
+    "-K2ib5JHRbbL1NrztUfO": {
+      "name": "Алексей",
+      "middle": "Александрович",
+      "lastName": "Петров",
+      "number": "89764323456",
+      "position": "ученик"
+    },
+    "-K2ib5JHRbbL2NrztUfO": {
+      "name": "Григорий",
+      "middle": "Николаевич",
+      "lastName": "Сидоров",
+      "number": "897644556",
+      "position": "преподаватель"
+    },
+    "-K2ib5JHRbbL3NrztUfO": {
+      "name": "Павел",
+      "middle": "Петрович",
+      "lastName": "Иванов",
+      "number": "893333456",
+      "position": "ученик"
+    }
+  }
+}
