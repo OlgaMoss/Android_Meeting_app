@@ -1,4 +1,4 @@
-package com.chanta.myapplication.entity;
+package com.chanta.myapplication.model;
 
 
 
@@ -17,18 +17,19 @@ public class Participant implements Serializable {
     private String lastName;
     private String position;
     private String number;
+    private String email;
 
     public Participant(){
 
     }
 
-
-    public Participant(String name, String middle, String lastName, String position, String number) {
+    public Participant(String name, String middle, String lastName, String position, String number, String email) {
         this.name = name;
         this.middle = middle;
         this.lastName = lastName;
         this.position = position;
         this.number = number;
+        this.email = email;
     }
 
     public String getName() {
@@ -71,4 +72,11 @@ public class Participant implements Serializable {
         this.number = number;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

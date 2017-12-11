@@ -1,4 +1,4 @@
-package com.chanta.myapplication.entity.utilsEntity;
+package com.chanta.myapplication.model.utilsModel;
 
 /**
  * Created by chanta on 06.11.17.

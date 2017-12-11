@@ -1,12 +1,10 @@
-package com.chanta.myapplication.entity;
+package com.chanta.myapplication.model;
 
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,6 +14,7 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class Meeting  {
 
+    private String uid;
     private String name;
     private String description;
     private String dateTo;
@@ -26,13 +25,22 @@ public class Meeting  {
     public Meeting() {
     }
 
-    public Meeting(String name, String description, String dateTo, String dateFrom, Map<String, Boolean> participant, String priority) {
+    public Meeting(String uid, String name, String description, String dateTo, String dateFrom, Map<String, Boolean> participant, String priority) {
+        this.uid = uid;
         this.name = name;
         this.description = description;
         this.dateTo = dateTo;
         this.dateFrom = dateFrom;
         this.participant = participant;
         this.priority = priority;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getName() {
@@ -86,6 +94,7 @@ public class Meeting  {
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
+        result.put("uid", uid);
         result.put("name", name);
         result.put("description", description);
         result.put("dateTo", dateTo);
