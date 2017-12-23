@@ -88,6 +88,8 @@
     <string name="email">Почта</string>
     <string name="notification">Новая встреча!</string>
     <string name="load_msg">Обновлено!</string>
+    <string name="search">Поиск</string>
+    <string name="text_for_search_hint">поиск...</string>
 
 
 </resources>

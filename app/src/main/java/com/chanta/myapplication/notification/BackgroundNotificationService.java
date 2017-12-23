@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -20,7 +21,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -41,47 +41,51 @@ public class BackgroundNotificationService extends IntentService {
     DatabaseReference databaseReference;
     MeetingListener meetingListener, uploadMeetingListener;
     Long today;
-    Boolean toNotify = false;
 
     List<Meeting> meetings = new ArrayList<>();
     List<String> keys = new ArrayList<>();
+    private Handler mHandler;
 
 
     public BackgroundNotificationService() {
         super("BackgroundNotificationService");
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mHandler = new Handler();
+    }
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        today = currentTimeMillis();
+
+        mHandler.post(() -> Toast.makeText(BackgroundNotificationService.this, "Test", Toast.LENGTH_LONG).show());
 
         if (intent != null) {
             final String action = intent.getAction();
-            ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
-            Log.d(TAG, "onHandleIntent: " + action);
             if (UPLOAD.equals(action)) {
+
                 final boolean toNotify = intent.getBooleanExtra("toNotify", false);
-
-
+                ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
-                    databaseReference = FirebaseDatabase.getInstance().getReference();
-                    uploadMeetingListener = new MeetingListener(databaseReference, toNotify);
-                    databaseReference.child("meetings").addValueEventListener(meetingListener);
+//                    databaseReference = FirebaseDatabase.getInstance().getReference();
+//                    databaseReference.addValueEventListener( new MeetingListener(databaseReference, toNotify));
+                    //databaseReference.child("meetings").addValueEventListener(meetingListener);
                 }
             } else if (LOAD_EVERY_10_MIN.equals(action)) {
                 final boolean toNotify = intent.getBooleanExtra("toNotify", true);
-                Log.d(TAG, "Request get all meetings");
-                Toast.makeText(getApplicationContext(), "Request get all meetings", Toast.LENGTH_LONG).show();
-
-                today = currentTimeMillis();
-
+                ConnectivityManager connMan = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo networkInfo = connMan.getActiveNetworkInfo();
                 if (networkInfo != null && networkInfo.isConnected()) {
+                    Toast.makeText(getApplicationContext(), "Request get all meetings", Toast.LENGTH_LONG).show();
                     databaseReference = FirebaseDatabase.getInstance().getReference();
-                    meetingListener = new MeetingListener(databaseReference, toNotify);
-                    databaseReference.child("meetings").addValueEventListener(meetingListener);
+                    databaseReference.addValueEventListener(new MeetingListener(databaseReference, toNotify));
                 }
+
             }
         }
 
@@ -100,54 +104,62 @@ public class BackgroundNotificationService extends IntentService {
 
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
-            Meeting meeting;
             Long dateCreated;
             meetings.clear();
+            Iterable<DataSnapshot> meetingsIterable = dataSnapshot.child("meetings").getChildren();
             int cntMeetings = 0;
-            for (DataSnapshot child : dataSnapshot.getChildren()) {
-                meeting = child.getValue(Meeting.class);
-                assert meeting != null;
-                dateCreated = Long.valueOf(meeting.getDateCreated());
+            try {
+                for (DataSnapshot snapshot : meetingsIterable) {
+                    Iterable<DataSnapshot> meeting = snapshot.getChildren();
+                    for (DataSnapshot props : meeting) {
+                        if ("dateCreated".equals(props.getKey())) {
+                            dateCreated = Long.valueOf(String.valueOf(props.getValue()));
+                            if (today - dateCreated <= 1000 * 60 * 10) {
+//                                meetings.add(meeting);
+//                                keys.add(child.getKey());
+                                cntMeetings++;
+                            }
+                        }
+                    }
+                    if (toNotify && cntMeetings > 0) {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),
+                                0, intent,
+                                PendingIntent.FLAG_CANCEL_CURRENT);
 
-                if (today - dateCreated <= 1000 * 60 * 10) {
-                    meetings.add(meeting);
-                    keys.add(child.getKey());
+                        Notification.Builder builder = new Notification.Builder(getApplicationContext());
 
-                    cntMeetings++;
+                        builder.setContentIntent(pendingIntent)
+                                .setSmallIcon(R.mipmap.ic_launcher)
+                                .setTicker(getString(R.string.notification))
+                                .setWhen(System.currentTimeMillis())
+                                .setAutoCancel(true)
+                                .setContentTitle(getString(R.string.notification))
+                                .setContentText("Прочти!");
+                        Notification notification = builder.build();
+
+                        NotificationManager manager = (NotificationManager) getApplicationContext().
+                                getSystemService(Context.NOTIFICATION_SERVICE);
+                        if (manager != null)
+                            manager.notify(new Random().nextInt(), notification);
+                    }
                 }
-
-                if (toNotify && cntMeetings > 0) {
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                    PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),
-                            0, intent,
-                            PendingIntent.FLAG_CANCEL_CURRENT);
-
-                    Notification.Builder builder = new Notification.Builder(getApplicationContext());
-
-                    builder.setContentIntent(pendingIntent)
-                            .setSmallIcon(R.mipmap.ic_launcher)
-                            .setTicker(getString(R.string.notification))
-                            .setWhen(System.currentTimeMillis())
-                            .setAutoCancel(true)
-                            .setContentTitle(getString(R.string.notification))
-                            .setContentText("Прочти!");
-                    Notification notification = builder.build();
-
-                    NotificationManager manager = (NotificationManager) getApplicationContext().
-                            getSystemService(Context.NOTIFICATION_SERVICE);
-                    if (manager != null)
-                        manager.notify(new Random().nextInt(), notification);
-                }
+            } catch (Exception e) {
+                Log.e("UpdateMeeting_E", e.getMessage());
+            } finally {
+                databaseReference.removeEventListener(this);
+                stopSelf();
             }
-            if (!toNotify) {
-                Intent intent = new Intent();
-                intent.putExtra(MainActivity.UPLOAD_MEETINGS_KEY, (Serializable) meetings);
-                Toast.makeText(getApplicationContext(), R.string.load_msg, Toast.LENGTH_LONG).show();
 
-            }
-            databaseReference.removeEventListener(this);
-            toNotify = false;
+//            if (!toNotify) {
+//                Intent intent = new Intent();
+//                intent.putExtra(MainActivity.UPLOAD_MEETINGS_KEY, (Serializable) meetings);
+//                Toast.makeText(getApplicationContext(), R.string.load_msg, Toast.LENGTH_LONG).show();
+//
+//            }
+//            databaseReference.removeEventListener(this);
+//            toNotify = false;
 
         }
 

@@ -31,7 +31,7 @@ public class RecentMeetingFragment extends MeetingListFragment{
 //        Query recentMeetingsQuery = databaseReference.child("meetings").orderByChild("dateTo")
 //                .startAt(strDate+"\uf8ff").endAt("").limitToFirst(100);
 
-        Query recentMeetingsQuery = databaseReference.child("meetings").orderByChild("dateTo").limitToFirst(100);
+        Query recentMeetingsQuery = databaseReference.child("meetings").limitToFirst(100);
 
         return recentMeetingsQuery;
     }

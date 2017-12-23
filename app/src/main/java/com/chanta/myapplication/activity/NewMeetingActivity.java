@@ -187,7 +187,7 @@ public class NewMeetingActivity extends BaseActivity {
 
         // Disable button so there are no multi-posts
         setEditingEnabled(false);
-        Toast.makeText(this, "Meeting...", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Meeting...", Toast.LENGTH_SHORT).show();
 
         // [START single_value_read]
         final String participateId = getUid();

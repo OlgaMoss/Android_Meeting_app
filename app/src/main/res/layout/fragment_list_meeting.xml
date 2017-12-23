@@ -4,29 +4,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
-
-    <SearchView
-        android:id="@+id/search_view"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:gravity="start"
-        android:hint="@string/text_search"
-        android:imeOptions="actionSend"
-        android:maxLines="1"
-        android:textSize="@dimen/app_name_text_size" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="@string/text_for_search_hint" />
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/search" />
+        </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/listMeetingView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-
+        android:layout_below="@+id/search_bar"
         android:clickable="true"
         android:clipToPadding="false"
         android:gravity="top"
         android:padding="5dp"
         android:scrollbars="vertical"
         tools:listitem="@layout/item_meeting" />
+    </RelativeLayout>
 
 </FrameLayout>
