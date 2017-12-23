@@ -11,7 +11,7 @@
     <string name="title_added">Добавить встречу</string>
     <string name="name_added">Название</string>
     <string name="describe_added">Описание</string>
-    <string name="to_date">Время начала:</string>
+    <string name="to_date">Время начала:     </string>
     <string name="from_date">Время окончания:</string>
     <string name="date">Дата</string>
     <string name="time">Время</string>
@@ -82,6 +82,12 @@
     <string name="menu_log_out">Выход</string>
     <string name="default_text">description</string>
     <string name="added_participate">Добавиться</string>
+    <string name="send">Отправить SMS</string>
+    <string name="start_date">Начало в</string>
+    <string name="end_date">Конец в</string>
+    <string name="email">Почта</string>
+    <string name="notification">Новая встреча!</string>
+    <string name="load_msg">Обновлено!</string>
 
 
 </resources>

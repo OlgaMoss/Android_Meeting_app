@@ -19,6 +19,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.chanta.myapplication.activity.AddedParticipantActivity;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -106,7 +108,7 @@ public class AddedActivity extends AppCompatActivity implements View.OnClickList
         liste.addAll(values);
         System.out.println("liste " + liste.toString());
         adapter = new ArrayAdapter<String>(getApplication(),
-                R.layout.list_for_partision, R.id.nameParticipate, liste);
+                R.layout.list_for_particpants, R.id.nameParticipate, liste);
 
         participantslistView.setAdapter(adapter);
         participantslistView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {

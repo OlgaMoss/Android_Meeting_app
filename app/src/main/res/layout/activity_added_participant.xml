@@ -6,7 +6,7 @@
     android:layout_height="437dp"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.chanta.myapplication.AddedParticipantActivity"
+    tools:context="com.chanta.myapplication.activity.AddedParticipantActivity"
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
 
@@ -36,6 +36,12 @@
         android:hint="@string/middle_name" />
 
     <EditText
+        android:id="@+id/email"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email" />
+
+    <EditText
         android:id="@+id/position"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -47,23 +53,12 @@
         android:layout_height="wrap_content"
         android:hint="@string/number" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="@string/necessarily" />
 
     <Button
         android:id="@+id/button_added_participant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_added" />
-
-    <Button
-        android:id="@+id/button_cancel_added"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cancel" />
 
 </LinearLayout>
 

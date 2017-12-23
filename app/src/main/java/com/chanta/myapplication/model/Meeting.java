@@ -4,6 +4,7 @@ package com.chanta.myapplication.model;
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,25 +13,28 @@ import java.util.Map;
  */
 
 @IgnoreExtraProperties
-public class Meeting  {
+public class Meeting implements Serializable {
 
     private String uid;
     private String name;
     private String description;
     private String dateTo;
     private String dateFrom;
+    private String dateCreated;
     public Map<String, Boolean> participant = new HashMap<>();
     private String priority;
 
     public Meeting() {
     }
 
-    public Meeting(String uid, String name, String description, String dateTo, String dateFrom, Map<String, Boolean> participant, String priority) {
+    public Meeting(String uid, String name, String description, String dateTo, String dateFrom,
+                   String dateCreated, Map<String, Boolean> participant, String priority) {
         this.uid = uid;
         this.name = name;
         this.description = description;
         this.dateTo = dateTo;
         this.dateFrom = dateFrom;
+        this.dateCreated = dateCreated;
         this.participant = participant;
         this.priority = priority;
     }
@@ -75,6 +79,14 @@ public class Meeting  {
         this.dateFrom = dateFrom;
     }
 
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
     public Map<String, Boolean> getParticipant() {
         return participant;
     }
@@ -99,9 +111,9 @@ public class Meeting  {
         result.put("description", description);
         result.put("dateTo", dateTo);
         result.put("dateFrom", dateFrom);
+        result.put("dateCreated", dateCreated);
         result.put("participant", participant);
         result.put("priority", priority);
-
         return result;
     }
 }

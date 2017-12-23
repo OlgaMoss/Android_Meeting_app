@@ -6,21 +6,25 @@
 
     <TextView
         android:id="@+id/meeting_name"
-        style="@style/Base.TextAppearance.AppCompat.Small"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginStart="10dp"
         android:gravity="center_vertical"
+        android:maxLines="1"
+
+        android:textStyle="bold"
         tools:text="Some author" />
 
     <TextView
         android:id="@+id/meeting_title"
-        style="@style/TextAppearance.AppCompat.Medium"
+        style="@style/Base.TextAppearance.AppCompat.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/meeting_name"
+        android:layout_marginStart="10dp"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textStyle="bold"
         tools:text="My First Meeting" />
 </RelativeLayout>

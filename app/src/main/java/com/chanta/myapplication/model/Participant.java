@@ -1,10 +1,12 @@
 package com.chanta.myapplication.model;
 
 
-
+import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by chanta on 06.11.17.
@@ -19,7 +21,7 @@ public class Participant implements Serializable {
     private String number;
     private String email;
 
-    public Participant(){
+    public Participant() {
 
     }
 
@@ -78,5 +80,17 @@ public class Participant implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("name", name);
+        result.put("middle", middle);
+        result.put("lastName", lastName);
+        result.put("position", position);
+        result.put("number", number);
+        result.put("email", email);
+        return result;
     }
 }

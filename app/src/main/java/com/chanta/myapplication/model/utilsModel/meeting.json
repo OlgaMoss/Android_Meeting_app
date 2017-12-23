@@ -4,26 +4,41 @@
     "-K2ib4H77rj0LYewF7dP": {
       "name": "Встреча 1",
       "description": "Приветствие",
-      "dateTo": "2012-09-26 14:23",
-      "dateFrom": "2012-09-26 17:23",
-      "participants": "true",
-      "priority": "срочная"
+      "dateTo": "2012/09/26 14:23",
+      "dateFrom": "2012/09/26 17:23",
+      "participants": {
+        "-K2ib5JHRbbL1NrztUfO": "true",
+        "-K2ib5JHRbbL3NrztUfO": "true"
+      },
+      "priority": "срочная",
+      "dateCreated": "1513365954162",
+      "uid": "-K2ib5JHRbbL1NrztUfO"
     },
     "-K2ib5JHRbbL0NrztUfO": {
       "name": "Встреча 2",
       "description": "Приветствие 2",
       "dateTo": "2012-09-27 14:23",
       "dateFrom": "2012-09-27 17:23",
-      "participants": "true",
-      "priority": "плановая"
+      "participants": {
+        "-K2ib5JHRbbL1NrztUfO": "true",
+        "-K2ib5JHRbbL3NrztUfO": "true"
+      },
+      "priority": "плановая",
+      "dateCreated": "1513361334166",
+      "uid": "-K2ib5JHRbbL1NrztUfO"
     },
     "-K2ib62mjHh34CAUbide": {
       "name": "Встреча 3",
       "description": "Приветствие 3",
       "dateTo": "2012-09-29 14:23",
       "dateFrom": "2012-09-29 17:23",
-      "participants": "true",
-      "priority": "плановая"
+      "participants": {
+        "-K2ib5JHRbbL1NrztUfO": "true",
+        "-K2ib5JHRbbL3NrztUfO": "true"
+      },
+      "priority": "плановая",
+      "dateCreated": "1513361334166",
+      "uid": "-K2ib5JHRbbL2NrztUfO"
     }
   },
   "participant-meetings" : {
@@ -33,16 +48,27 @@
         "description": "Приветствие",
         "dateTo": "2012-09-26 14:23",
         "dateFrom": "2012-09-26 17:23",
-        "participants": []"true",//todo поправить!!!
-        "priority": "срочная"
+        "participants": {
+          "-K2ib5JHRbbL1NrztUfO": "true",
+          "-K2ib5JHRbbL3NrztUfO": "true"
+        },
+        "priority": "срочная",
+        "dateCreated": "1513365954162",
+        "uid": "-K2ib5JHRbbL1NrztUfO"
+
       },
       "-K2ib5JHRbbL0NrztUfO": {
         "name": "Встреча 2",
         "description": "Приветствие 2",
         "dateTo": "2012-09-27 14:23",
         "dateFrom": "2012-09-27 17:23",
-        "participants": "true",
-        "priority": "плановая"
+        "participants": {
+          "-K2ib5JHRbbL1NrztUfO": "true",
+          "-K2ib5JHRbbL3NrztUfO": "true"
+        },
+        "priority": "плановая",
+        "dateCreated": "1513361334166",
+        "uid": "-K2ib5JHRbbL1NrztUfO"
       }
     },
     "-K2ib5JHRbbL2NrztUfO":{
@@ -51,12 +77,14 @@
         "description": "Приветствие 3",
         "dateTo": "2012-09-29 14:23",
         "dateFrom": "2012-09-29 17:23",
-        "participants": "true",
-        "priority": "плановая"
+        "participants": {
+          "-K2ib5JHRbbL1NrztUfO": "true",
+          "-K2ib5JHRbbL3NrztUfO": "true"
+        },
+        "priority": "плановая",
+        "dateCreated": "1513361334166",
+        "uid": "-K2ib5JHRbbL2NrztUfO"
       }
-    },
-    "-K2ib5JHRbbL3NrztUfO":{
-
     }
   },
 

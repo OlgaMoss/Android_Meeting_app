@@ -1,6 +1,8 @@
 package com.chanta.myapplication.activity;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,7 +31,7 @@ import java.util.List;
  * Created by chanta on 08.12.17.
  */
 
-public class MeetingDetailActivity extends BaseActivity{
+public class MeetingDetailActivity extends BaseActivity {
 
 
     private static final String TAG = "MeetingDetailActivity";
@@ -40,16 +42,17 @@ public class MeetingDetailActivity extends BaseActivity{
     private DatabaseReference mParticipatesReference;
     private ValueEventListener mMeetingListener;
     private String mMeetingKey;
-    private CommentAdapter mAdapter;
+    private ParticipateAdapter mAdapter;
+
+    private Meeting meeting;
 
     private TextView mNameView;
     private TextView mDescriptionView;
     private TextView mDateToView;
-    private TextView mTimeToView;
     private TextView mDateFromView;
-    private TextView mTimeFromView;
     private TextView mPriorityView;
     private Button mEditButton;
+    private Button mSendButton;
     private Button mAddedParticipateButton;
     private RecyclerView mParticipatesRecycler;
 
@@ -74,20 +77,30 @@ public class MeetingDetailActivity extends BaseActivity{
         mNameView = findViewById(R.id.meeting_name_detail);
         mDescriptionView = findViewById(R.id.meeting_description);
         mDateToView = findViewById(R.id.to_date_textView_detail);
-        mTimeToView = findViewById(R.id.to_time_textView_detail);
         mDateFromView = findViewById(R.id.from_date_textView_detail);
-        mTimeFromView = findViewById(R.id.from_time_textView_detail);
         mPriorityView = findViewById(R.id.meeting_priority);
         mEditButton = findViewById(R.id.edit_button);
+        mSendButton = findViewById(R.id.send_button);
         mAddedParticipateButton = findViewById(R.id.added_participate_button);
-        mParticipatesRecycler = findViewById(R.id.recycler_participates);
+        mParticipatesRecycler = findViewById(R.id.recycler_participates_detail);
 
-        mEditButton.setOnClickListener(view -> {
+        mEditButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, NewMeetingActivity.class);
+            intent.putExtra(NewMeetingActivity.MEETING_KEY, mMeetingReference.getKey());
+            intent.putExtra(NewMeetingActivity.MEETING, meeting);
+            startActivity(intent);
+        });
 
-                }
-        );
         mParticipatesRecycler.setLayoutManager(new LinearLayoutManager(this));
 
+        mSendButton.setOnClickListener(v -> {
+            String numberText = "2112345"; //todo вставить все номера
+            String messageText = "Всем привет! Вас ожидают на встрече";
+
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + numberText));
+            intent.putExtra("sms_body", messageText);
+            startActivity(intent);
+        });
     }
 
     @Override
@@ -100,10 +113,13 @@ public class MeetingDetailActivity extends BaseActivity{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
-                Meeting meeting = dataSnapshot.getValue(Meeting.class);
+                meeting = dataSnapshot.getValue(Meeting.class);
                 // [START_EXCLUDE]
                 mNameView.setText(meeting.getName());
                 mDescriptionView.setText(meeting.getDescription());
+                mDateToView.setText(meeting.getDateTo());
+                mDateFromView.setText(meeting.getDateFrom());
+                mPriorityView.setText(meeting.getPriority());
                 // [END_EXCLUDE]
             }
 
@@ -124,7 +140,7 @@ public class MeetingDetailActivity extends BaseActivity{
         mMeetingListener = meetingListener;
 
         // Listen for comments
-        mAdapter = new CommentAdapter(this, mParticipatesReference);
+        mAdapter = new ParticipateAdapter(this, mParticipatesReference);
         mParticipatesRecycler.setAdapter(mAdapter);
     }
 
@@ -153,7 +169,7 @@ public class MeetingDetailActivity extends BaseActivity{
         }
     }
 
-    private static class CommentAdapter extends RecyclerView.Adapter<ParticipateViewHolder> {
+    private static class ParticipateAdapter extends RecyclerView.Adapter<ParticipateViewHolder> {
 
         private Context mContext;
         private DatabaseReference mDatabaseReference;
@@ -162,7 +178,7 @@ public class MeetingDetailActivity extends BaseActivity{
         private List<String> mParticipateIds = new ArrayList<>();
         private List<Participant> mParticipates = new ArrayList<>();
 
-        public CommentAdapter(final Context context, DatabaseReference ref) {
+        public ParticipateAdapter(final Context context, DatabaseReference ref) {
             mContext = context;
             mDatabaseReference = ref;
 
@@ -259,7 +275,7 @@ public class MeetingDetailActivity extends BaseActivity{
         @Override
         public ParticipateViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
-            View view = inflater.inflate(R.layout.list_for_partision, parent, false);
+            View view = inflater.inflate(R.layout.list_for_particpants, parent, false);
             return new ParticipateViewHolder(view);
         }
 

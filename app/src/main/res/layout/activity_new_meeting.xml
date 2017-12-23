@@ -5,30 +5,149 @@
     android:layout_height="match_parent"
     tools:context="com.chanta.myapplication.activity.NewMeetingActivity">
 
-    <EditText
-        android:id="@+id/field_title"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:hint="Title"
-        android:maxLines="1" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/field_body"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/field_title"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="5dp"
-        android:hint="Write your post..."
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:scrollHorizontally="false" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/field_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/field_title"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Write your post..."
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:scrollHorizontally="false" />
+
+                <EditText
+                    android:id="@+id/field_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="Title"
+                    android:maxLines="1" />
+
+                <LinearLayout
+                    android:id="@+id/date_end_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_start_layout"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/from_date_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/from_date" />
+
+                    <TextView
+                        android:id="@+id/from_date_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:clickable="true"
+                        android:onClick="onChooseEndDate"
+                        android:text="@string/date" />
+
+                    <TextView
+                        android:id="@+id/from_time_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:clickable="true"
+                        android:onClick="onChooseEndTime"
+                        android:text="@string/time" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/date_start_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/field_body"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/to_date_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/to_date" />
+
+                    <TextView
+                        android:id="@+id/to_date_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:clickable="true"
+                        android:onClick="onChooseStartDate"
+                        android:text="@string/date" />
+
+                    <TextView
+                        android:id="@+id/to_time_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:clickable="true"
+                        android:onClick="onChooseStartTime"
+                        android:text="@string/time" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/prioritySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_end_layout"
+                    android:layout_marginTop="10dp"
+                    android:entries="@array/list_priorities"
+                    android:hint="@string/priority" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_participates"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/prioritySpinner"
+                    tools:listitem="@layout/list_for_particpants" />
+
+                <Button
+                    android:id="@+id/add_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycler_participates"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/add_added" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_submit_post"
@@ -37,6 +156,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
-        android:src="@mipmap/ic_navigation_check_24"/>
+        android:src="@mipmap/ic_navigation_check_24" />
+
 
 </RelativeLayout>
